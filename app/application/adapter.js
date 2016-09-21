@@ -1,7 +1,9 @@
 import Ember from 'ember';
 import ActiveModelAdapter from 'active-model-adapter';
+import ENV from 'ga-wdi-boston.ember-auth/config/environment'; //deployment step
 
 export default ActiveModelAdapter.extend({
+  host: ENV.apiHost, //deployment step
   auth: Ember.inject.service(),
 
   headers: Ember.computed('auth.credentials.token', {
