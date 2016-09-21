@@ -16,3 +16,4 @@ export default Ember.Route.extend({
     },
   },
 });
+//injecting auth to auth service.

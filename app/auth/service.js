@@ -5,7 +5,9 @@ export default Ember.Service.extend({
   ajax: Ember.inject.service(),
   credentials: storageFor('auth'),
   isAuthenticated: Ember.computed.bool('credentials.token'),
-
+//storageFor comes from Ember local storage.  Uses computer local memory to
+//store local memory.
+//isAuthenticated checks to see that a user is authenticated.
   signUp (credentials) {
     return this.get('ajax').post('/sign-up', {
       data: {

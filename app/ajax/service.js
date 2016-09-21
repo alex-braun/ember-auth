@@ -2,6 +2,7 @@ import Ember from 'ember';
 import AjaxService from 'ember-ajax/services/ajax';
 
 export default AjaxService.extend({
+  // host: ENV.host,
   auth: Ember.inject.service(),
   headers: Ember.computed('auth.credentials.token', {
     get () {
